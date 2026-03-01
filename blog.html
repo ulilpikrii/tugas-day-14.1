@@ -1,259 +1,700 @@
 <!DOCTYPE html>
+<html lang="id">
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Eco-Adventure Logs | Gemilang Katun Outbound</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#13ec87",
-                        "secondary": "#00f0ff", // Glowing cyan for buttons
-                        "background-light": "#f6f8f7",
-                        "background-dark": "#10221a",
-                        "leaf-green": "#2d6a4f",
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "1rem",
-                        "lg": "2rem",
-                        "xl": "3rem",
-                        "full": "9999px"
-                    },
-                },
-            },
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Artikel Outbound & Wisata Batu Malang | Gemilang Katun</title>
+    <meta name="description"
+        content="Baca artikel terbaru seputar outbound, team building, wisata alam, dan tips petualangan di Batu Malang. Informasi lengkap dari vendor outbound terpercaya." />
+    <meta name="keywords"
+        content="blog outbound batu malang, artikel team building, tips outbound, wisata batu malang, vendor outbound terpercaya" />
+    <meta name="author" content="Ulil" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://gemilangkatun.com/blog.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blog - Artikel Outbound & Wisata Batu Malang | Gemilang Katun" />
+    <meta property="og:description"
+        content="Baca artikel terbaru seputar outbound, team building, wisata alam, dan tips petualangan di Batu Malang." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gemilangkatun.com/blog.html" />
+    <meta property="og:image" content="https://gemilangkatun.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:site_name" content="Gemilang Katun Outbound" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blog - Artikel Outbound & Wisata Batu Malang | Gemilang Katun" />
+    <meta name="twitter:description"
+        content="Baca artikel terbaru seputar outbound, team building, wisata alam di Batu Malang." />
+    <meta name="twitter:image" content="https://gemilangkatun.com/og-image.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+    <link rel="apple-touch-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        :root {
+            --primary: #13ec87;
+            --primary-dark: #0bc96f;
+            --accent-gold: #ffd700;
+            --accent-cyan: #00f5ff;
+            --bg-light: #f6f8f7;
+            --bg-dark: #10221a;
+            --emerald-deep: #064e3b;
+            --emerald-mid: #065f46;
         }
-    </script>
-<style>
-        .curved-divider {
-            clip-path: ellipse(100% 55% at 48% 44%);
+
+        * {
+            box-sizing: border-box;
         }
-        .oval-frame {
-            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--bg-light);
+            color: #1e293b;
+            overflow-x: hidden;
         }
-        .leaf-badge {
-            border-radius: 2px 20px 2px 20px;
+
+        /* ===== NAVBAR (SAME AS INDEX) ===== */
+        .navbar-glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(19, 236, 135, 0.15);
+            border-radius: 50px;
+            padding: 0.65rem 1.8rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
         }
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(19, 236, 135, 0.2);
+
+        .navbar-glass.scrolled {
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand-icon {
+            background: var(--primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-dark);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .navbar .nav-link {
+            font-weight: 500;
+            color: #334155;
+            position: relative;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
+            color: var(--emerald-deep);
+        }
+
+        .navbar .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .btn-wa-nav {
+            background: var(--primary);
+            color: var(--bg-dark);
+            border: none;
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-wa-nav:hover {
+            background: var(--primary-dark);
+            color: var(--bg-dark);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(19, 236, 135, 0.4);
+        }
+
+        .navbar-toggler {
+            border: none;
+            padding: 0.5rem;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23064e3b' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        /* ===== BLOG HEADER ===== */
+        .blog-header {
+            background: rgba(19, 236, 135, 0.06);
+            padding: 140px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-header::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(19, 236, 135, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .blog-header::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            left: -60px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0, 245, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .blog-header .curved-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: var(--bg-light);
+            clip-path: ellipse(100% 100% at 50% 100%);
+        }
+
+        /* ===== ARTICLE CARD ===== */
+        .article-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #fff;
+            transition: all 0.3s;
+        }
+
+        .article-card:hover {
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+            transform: translateY(-6px);
+        }
+
+        .article-card .card-img-wrap {
+            overflow: hidden;
+            height: 220px;
+        }
+
+        .article-card .card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .article-card:hover .card-img-wrap img {
+            transform: scale(1.08);
+        }
+
+        .article-badge {
+            border-radius: 4px 16px 4px 16px;
+            background: var(--primary);
+            color: var(--bg-dark);
+            padding: 0.25rem 0.75rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .btn-read-more {
+            background: var(--primary);
+            color: var(--bg-dark);
+            border: none;
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .btn-read-more:hover {
+            background: var(--primary-dark);
+            color: var(--bg-dark);
+            box-shadow: 0 0 15px rgba(19, 236, 135, 0.4);
+        }
+
+        /* ===== FOOTER (SAME AS INDEX) ===== */
+        .footer-main {
+            background: linear-gradient(135deg, var(--emerald-deep) 0%, var(--bg-dark) 100%);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-main::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(19, 236, 135, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .footer-main a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-main a:hover {
+            color: var(--primary);
+        }
+
+        .footer-social-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(19, 236, 135, 0.15);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            transition: all 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .footer-social-btn:hover {
+            background: var(--primary);
+            color: var(--bg-dark);
+            transform: scale(1.1);
+        }
+
+        .footer-divider {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* ===== FLOATING BUTTONS (SAME AS INDEX) ===== */
+        .floating-btns {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 9999;
+        }
+
+        .btn-scroll-top {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--accent-gold), #ffb700);
+            color: var(--bg-dark);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+            transition: all 0.3s;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .btn-scroll-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .btn-scroll-top:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6);
+        }
+
+        .btn-wa-float {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: #fff;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            animation: waFloat 3s ease-in-out infinite;
+        }
+
+        .btn-wa-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+            color: #fff;
+        }
+
+        @keyframes waFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--emerald-deep);
+        }
+
+        @media(max-width:768px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
     </style>
+
+    <!-- Schema.org Blog -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Blog Gemilang Katun Outbound",
+        "description": "Artikel seputar outbound, team building, wisata alam, dan tips petualangan di Batu Malang",
+        "url": "https://gemilangkatun.com/blog.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Gemilang Katun Outbound",
+            "url": "https://gemilangkatun.com"
+        }
+    }
+    </script>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
-<!-- Organic Navbar -->
-<nav class="sticky top-0 z-50 px-6 py-4">
-<div class="max-w-7xl mx-auto glass-effect rounded-full px-8 py-3 flex items-center justify-between shadow-lg shadow-primary/5">
-<div class="flex items-center gap-3">
-<div class="bg-primary p-2 rounded-full">
-<span class="material-symbols-outlined text-background-dark text-2xl">eco</span>
-</div>
-<h1 class="text-xl font-bold tracking-tight">Gemilang Katun</h1>
-</div>
-<div class="hidden md:flex items-center gap-8">
-<a class="hover:text-primary transition-colors font-medium" href="#">Home</a>
-<a class="hover:text-primary transition-colors font-medium underline decoration-primary decoration-2 underline-offset-4" href="#">Blog</a>
-<a class="hover:text-primary transition-colors font-medium" href="#">Adventures</a>
-<a class="hover:text-primary transition-colors font-medium" href="#">About</a>
-</div>
-<div class="flex items-center gap-4">
-<div class="relative hidden lg:block">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
-<input class="pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-full focus:ring-2 focus:ring-primary w-48 text-sm" placeholder="Explore nature..." type="text"/>
-</div>
-<button class="bg-primary text-background-dark px-6 py-2 rounded-full font-bold hover:shadow-lg hover:shadow-primary/30 transition-all">
-                    Book Now
+
+<body>
+
+    <!-- ===== NAVBAR (SAME AS INDEX) ===== -->
+    <nav class="navbar navbar-expand-md fixed-top py-3 px-3 px-lg-5" id="mainNavbar" style="z-index:1050;">
+        <div class="container-fluid">
+            <div class="navbar-glass d-flex align-items-center justify-content-between w-100">
+                <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none" href="index.html">
+                    <div class="navbar-brand-icon">
+                        <i class="bi bi-tree-fill"></i>
+                    </div>
+                    <span
+                        style="font-size:1.2rem;font-weight:700;color:var(--emerald-deep);letter-spacing:-0.5px;">Gemilang
+                        Katun</span>
+                </a>
+                <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-</div>
-</div>
-</nav>
-<!-- Header with Curved Divider -->
-<header class="relative bg-primary/10 pt-12 pb-32 overflow-hidden">
-<div class="max-w-4xl mx-auto text-center px-6 relative z-10">
-<span class="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Eco-Futurism Insights</span>
-<h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">The <span class="text-primary">Eco-Adventure</span> Logs</h1>
-<p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Exploring the harmony between high-tech sustainability and the lush landscapes of Batu, Malang.</p>
-</div>
-<!-- Animated-feel decorative circles -->
-<div class="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl -mr-48 -mt-24"></div>
-<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/20 rounded-full blur-3xl -ml-32 -mb-12"></div>
-<div class="absolute bottom-0 left-0 w-full h-24 bg-background-light dark:bg-background-dark curved-divider"></div>
-</header>
-<!-- Blog Grid -->
-<main class="max-w-7xl mx-auto px-6 -mt-16 relative z-20 pb-24">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-<!-- Article Card 1 -->
-<article class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all group flex flex-col h-full border border-slate-100 dark:border-slate-800">
-<div class="p-6 pb-0">
-<div class="oval-frame h-64 w-full overflow-hidden relative">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Solar panels integrated into lush forest canopy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMwqq5k9lehxm_PkG54bYqC4hFFdGFH16ib_GbTEhvA8fFIX_vPC2ulZmsYpq3nVDQMtxbrVEGUZgKgga7GJDimLlqh-U8p8a_XHuh_OLcgvL2OhziFkD-BUNsN2zbobg7H4qUzGLThIN_dcr3r8ZoBPMYzh6u4TZ6EmOFEeWpmIwDEXZ3DPcBZOkvSMrAFdhL4sReZB1vUEvCFEdGIQXPgxvNYEgheNRlrE-9GRmHtcYCNSDwf42xT5Fze4HwHClrwvYYlhsVclw"/>
-<div class="absolute top-4 left-4">
-<span class="leaf-badge bg-primary text-background-dark px-4 py-1 text-xs font-bold flex items-center gap-1 shadow-lg">
-<span class="material-symbols-outlined text-sm">light_mode</span> Solar Tips
-                            </span>
-</div>
-</div>
-</div>
-<div class="p-8 flex flex-col flex-grow">
-<h3 class="text-2xl font-bold mb-4 leading-tight group-hover:text-primary transition-colors">Harnessing the Sun: The Batu Solar Initiative</h3>
-<p class="text-slate-600 dark:text-slate-400 mb-8 line-clamp-3">How we use advanced photovoltaic leaves to power our entire outdoor campsite without disturbing the local ecosystem.</p>
-<div class="mt-auto">
-<button class="bg-secondary text-background-dark px-6 py-2 rounded-full font-bold text-sm flex items-center gap-2 shadow-[0_0_15px_rgba(0,240,255,0.4)] hover:shadow-[0_0_25px_rgba(0,240,255,0.6)] transition-all">
-                            Read More <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Article Card 2 -->
-<article class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all group flex flex-col h-full border border-slate-100 dark:border-slate-800">
-<div class="p-6 pb-0">
-<div class="oval-frame h-64 w-full overflow-hidden relative">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Futuristic architectural dome in deep jungle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA41tdVn4taf4lPrnDke-rEd-_CI5N-gNf0Gpvte6Bxt5n9FN5IkwLdvq5jizZ-Y3-QnUBvCAwBm0iD7_wgh2_iIheOx0KG2TaWDm6OKUIm_Yile0F9FIwWoqd8JvaXl7IQbM6CqHN5rSpbsec6O0M5llnbzWC2mVkD3p4YMkx-LT1Aon_9_dEm37288ijVgoooYbu4rxmjqLggxhTmbCXcfH3jqtYf8h_xVAoPLGg1_JoN9kGTG7-RBcb2GOF8N03Hp7CrpRWQwJc"/>
-<div class="absolute top-4 left-4">
-<span class="leaf-badge bg-primary text-background-dark px-4 py-1 text-xs font-bold flex items-center gap-1 shadow-lg">
-<span class="material-symbols-outlined text-sm">precision_manufacturing</span> Eco-Tech
-                            </span>
-</div>
-</div>
-</div>
-<div class="p-8 flex flex-col flex-grow">
-<h3 class="text-2xl font-bold mb-4 leading-tight group-hover:text-primary transition-colors">Bioluminescent Trails: Lighting the Way</h3>
-<p class="text-slate-600 dark:text-slate-400 mb-8 line-clamp-3">Exploring the lab-grown fungi that illuminate our night hiking trails through the Malang highlands.</p>
-<div class="mt-auto">
-<button class="bg-secondary text-background-dark px-6 py-2 rounded-full font-bold text-sm flex items-center gap-2 shadow-[0_0_15px_rgba(0,240,255,0.4)] hover:shadow-[0_0_25px_rgba(0,240,255,0.6)] transition-all">
-                            Read More <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Article Card 3 -->
-<article class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all group flex flex-col h-full border border-slate-100 dark:border-slate-800">
-<div class="p-6 pb-0">
-<div class="oval-frame h-64 w-full overflow-hidden relative">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Crystal clear river in high mountain valley" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgQMBOU7fltSNyUMW8OLlGxIFWeOLGC7M2kkDZFiY85IwRTLHTZ4LHT6S4lTbaSyAkdkdEseEguqQoSP8eVaDuCdYOC6lFyPACRZYDcNGqPctrswbGxL4ocF7F9CcSXDst-LMH2FEECh9GRmwPwjxb41D799Cc_ojAAPt1qmvAXJDxB63u4GOSMJ1T6ct2H79sSyijWXMdy1BokJsFm4LyfB3EuvBWyEhz6LT9D1wWr9BOqARjw1o7q3C-0L70NEJZMrVHBifqrXY"/>
-<div class="absolute top-4 left-4">
-<span class="leaf-badge bg-primary text-background-dark px-4 py-1 text-xs font-bold flex items-center gap-1 shadow-lg">
-<span class="material-symbols-outlined text-sm">hiking</span> Nature Walks
-                            </span>
-</div>
-</div>
-</div>
-<div class="p-8 flex flex-col flex-grow">
-<h3 class="text-2xl font-bold mb-4 leading-tight group-hover:text-primary transition-colors">The Mindful Ascent: High-Tech Zen</h3>
-<p class="text-slate-600 dark:text-slate-400 mb-8 line-clamp-3">Using wearable biometrics to guide your breathing while navigating the steep ridges of Batu's majestic peaks.</p>
-<div class="mt-auto">
-<button class="bg-secondary text-background-dark px-6 py-2 rounded-full font-bold text-sm flex items-center gap-2 shadow-[0_0_15px_rgba(0,240,255,0.4)] hover:shadow-[0_0_25px_rgba(0,240,255,0.6)] transition-all">
-                            Read More <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Article Card 4 -->
-<article class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all group flex flex-col h-full border border-slate-100 dark:border-slate-800">
-<div class="p-6 pb-0">
-<div class="oval-frame h-64 w-full overflow-hidden relative">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Aerial view of mist covered emerald hills" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTGhI6nwADNWa6Jbr-TMZ-UmU3MyJ6KZbtv4kP5JI437JW0oQuODcDwWKAiPrtiZjGRui6a-Lh9QU6v3o5WtSAyv5N_4waFV7522dr8fwcG9nN15V1hxz4DzZB_yAvZPSRQlZ8xmiQax5tbH-gqfq3kbSCy_GtMNAAaJyx1LKdfuFe1jW9VBzRW_JE_qn-RK_q4H-IuaVYqkP_WNfyIMTHSaQjj6WgM5KCfBYzbDAoSe8wP4cOhXOErdabf_sS-uyQGS23lP-O2oo"/>
-<div class="absolute top-4 left-4">
-<span class="leaf-badge bg-primary text-background-dark px-4 py-1 text-xs font-bold flex items-center gap-1 shadow-lg">
-<span class="material-symbols-outlined text-sm">map</span> Batu Guide
-                            </span>
-</div>
-</div>
-</div>
-<div class="p-8 flex flex-col flex-grow">
-<h3 class="text-2xl font-bold mb-4 leading-tight group-hover:text-primary transition-colors">Hidden Cascades: AR Exploration</h3>
-<p class="text-slate-600 dark:text-slate-400 mb-8 line-clamp-3">Unlock secret waterfalls with our Augmented Reality guide, revealing the history and geology of East Java's hidden gems.</p>
-<div class="mt-auto">
-<button class="bg-secondary text-background-dark px-6 py-2 rounded-full font-bold text-sm flex items-center gap-2 shadow-[0_0_15px_rgba(0,240,255,0.4)] hover:shadow-[0_0_25px_rgba(0,240,255,0.6)] transition-all">
-                            Read More <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Article Card 5 -->
-<article class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all group flex flex-col h-full border border-slate-100 dark:border-slate-800">
-<div class="p-6 pb-0">
-<div class="oval-frame h-64 w-full overflow-hidden relative">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Hydroponic garden vertical wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCybbwA8ZmoZ-8GLnOjNLuQx0pHv9Qk6L46oOce3m1MHCvDjfdK0hYVe2hxu9GqSiDTEnxEnRAFOILvL6I88Gg1moyDhFKL4NpWY6C0c0gjdXFtGKnXwxbFO6ayig7aeFz7R2G6u0mqUF6oVIKKsJD8cRBGvmPLeH6LKaMq39ZL-7vpFSZvEn843_mmwIeSGzdGVJU_DnI0LgQfVPykecuVdY9cK7aT9l7KK6ehk96NwUK2UIG9BpWS-pSt9x0Ho9g2MysaExJrrYw"/>
-<div class="absolute top-4 left-4">
-<span class="leaf-badge bg-primary text-background-dark px-4 py-1 text-xs font-bold flex items-center gap-1 shadow-lg">
-<span class="material-symbols-outlined text-sm">recycling</span> Sustainability
-                            </span>
-</div>
-</div>
-</div>
-<div class="p-8 flex flex-col flex-grow">
-<h3 class="text-2xl font-bold mb-4 leading-tight group-hover:text-primary transition-colors">Zero-Waste Outbound: The New Standard</h3>
-<p class="text-slate-600 dark:text-slate-400 mb-8 line-clamp-3">From mycelium-based gear to closed-loop water systems, learn how we achieve a 100% circular experience.</p>
-<div class="mt-auto">
-<button class="bg-secondary text-background-dark px-6 py-2 rounded-full font-bold text-sm flex items-center gap-2 shadow-[0_0_15px_rgba(0,240,255,0.4)] hover:shadow-[0_0_25px_rgba(0,240,255,0.6)] transition-all">
-                            Read More <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</article>
-</div>
-</main>
-<!-- Floating Action Buttons -->
-<div class="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
-<!-- WhatsApp FAB -->
-<button class="w-14 h-14 bg-primary text-background-dark rounded-full shadow-lg shadow-primary/40 flex items-center justify-center hover:scale-110 transition-transform">
-<svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
-</svg>
-</button>
-<!-- Scroll Up FAB -->
-<button class="w-14 h-14 bg-secondary text-background-dark rounded-full shadow-lg shadow-secondary/40 flex items-center justify-center hover:scale-110 transition-transform" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-<span class="material-symbols-outlined text-3xl">arrow_upward</span>
-</button>
-</div>
-<!-- Footer -->
-<footer class="bg-slate-100 dark:bg-slate-900 py-16 px-6">
-<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-<div class="col-span-1 md:col-span-2">
-<div class="flex items-center gap-3 mb-6">
-<div class="bg-primary p-2 rounded-full">
-<span class="material-symbols-outlined text-background-dark text-xl">eco</span>
-</div>
-<h2 class="text-2xl font-bold tracking-tight">Gemilang Katun</h2>
-</div>
-<p class="text-slate-600 dark:text-slate-400 max-w-sm mb-8">Pioneering the future of adventure in Batu. Join us in our journey towards a more sustainable and exciting tomorrow.</p>
-<div class="flex gap-4">
-<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
-<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
-<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
-</div>
-</div>
-<div>
-<h4 class="font-bold mb-6 uppercase text-sm tracking-widest text-primary">Quick Links</h4>
-<ul class="space-y-4 text-slate-600 dark:text-slate-400">
-<li><a class="hover:text-primary transition-colors" href="#">Our Mission</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Safety Protocols</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Booking Guide</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Partnerships</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold mb-6 uppercase text-sm tracking-widest text-primary">Newsletter</h4>
-<p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Get the latest eco-tips and adventure updates.</p>
-<div class="flex">
-<input class="bg-white dark:bg-slate-800 border-none rounded-l-full px-4 py-2 w-full focus:ring-1 focus:ring-primary" placeholder="Email address" type="email"/>
-<button class="bg-primary text-background-dark px-4 rounded-r-full font-bold text-sm">Join</button>
-</div>
-</div>
-</div>
-<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-slate-400 text-sm">
-<p>© 2024 Gemilang Katun Outbound. All rights reserved. Solarpunk Future Guaranteed.</p>
-</div>
-</footer>
-</body></html>
+                <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+                    <ul class="navbar-nav gap-1">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <a class="btn-wa-nav d-none d-md-inline-flex align-items-center gap-1"
+                    href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-whatsapp"></i> Hubungi Kami
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== BLOG HEADER ===== -->
+    <header class="blog-header">
+        <div class="container text-center position-relative" style="z-index:5;">
+            <span
+                style="color:var(--primary);font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:0.8rem;"
+                class="d-block mb-3">Blog & Artikel</span>
+            <h1 class="section-title mb-3" style="font-size:3rem;">Artikel <span
+                    style="color:var(--primary);">Outbound</span> & Wisata</h1>
+            <p style="color:#64748b;max-width:600px;margin:0 auto;font-size:1.05rem;">Temukan informasi, tips, dan
+                inspirasi seputar outbound, team building, dan wisata alam di Batu Malang.</p>
+        </div>
+        <div class="curved-bottom"></div>
+    </header>
+
+    <!-- ===== BLOG GRID ===== -->
+    <main class="container py-5" style="margin-top:-40px;position:relative;z-index:10;">
+        <div class="row g-4">
+            <!-- Article 1 -->
+            <div class="col-md-6 col-lg-4">
+                <article class="article-card h-100 d-flex flex-column">
+                    <div class="card-img-wrap position-relative">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMwqq5k9lehxm_PkG54bYqC4hFFdGFH16ib_GbTEhvA8fFIX_vPC2ulZmsYpq3nVDQMtxbrVEGUZgKgga7GJDimLlqh-U8p8a_XHuh_OLcgvL2OhziFkD-BUNsN2zbobg7H4qUzGLThIN_dcr3r8ZoBPMYzh6u4TZ6EmOFEeWpmIwDEXZ3DPcBZOkvSMrAFdhL4sReZB1vUEvCFEdGIQXPgxvNYEgheNRlrE-9GRmHtcYCNSDwf42xT5Fze4HwHClrwvYYlhsVclw"
+                            alt="Rekomendasi tempat outbound anak di Batu Malang" loading="lazy" width="400"
+                            height="220" />
+                        <span class="article-badge position-absolute" style="top:12px;left:12px;">
+                            <i class="bi bi-geo-alt-fill"></i> Wisata
+                        </span>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h3 class="fs-5 fw-bold mb-2">Rekomendasi Tempat Outbound Anak Terbaik di Batu Malang</h3>
+                        <p class="text-muted small mb-3 flex-grow-1">Temukan lokasi outbound anak yang aman, edukatif,
+                            dan menyenangkan di kawasan Batu Malang yang cocok untuk keluarga.</p>
+                        <a href="artikel-1.html" class="btn-read-more mt-auto">Baca Selengkapnya <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            <!-- Article 2 -->
+            <div class="col-md-6 col-lg-4">
+                <article class="article-card h-100 d-flex flex-column">
+                    <div class="card-img-wrap position-relative">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA41tdVn4taf4lPrnDke-rEd-_CI5N-gNf0Gpvte6Bxt5n9FN5IkwLdvq5jizZ-Y3-QnUBvCAwBm0iD7_wgh2_iIheOx0KG2TaWDm6OKUIm_Yile0F9FIwWoqd8JvaXl7IQbM6CqHN5rSpbsec6O0M5llnbzWC2mVkD3p4YMkx-LT1Aon_9_dEm37288ijVgoooYbu4rxmjqLggxhTmbCXcfH3jqtYf8h_xVAoPLGg1_JoN9kGTG7-RBcb2GOF8N03Hp7CrpRWQwJc"
+                            alt="Tips memilih vendor outbound Batu Malang terpercaya" loading="lazy" width="400"
+                            height="220" />
+                        <span class="article-badge position-absolute" style="top:12px;left:12px;">
+                            <i class="bi bi-lightbulb-fill"></i> Tips
+                        </span>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h3 class="fs-5 fw-bold mb-2">Tips Memilih Vendor Outbound Batu Malang yang Terpercaya</h3>
+                        <p class="text-muted small mb-3 flex-grow-1">Panduan lengkap untuk memilih vendor outbound yang
+                            profesional, aman, dan sesuai budget di Batu Malang.</p>
+                        <a href="artikel-2.html" class="btn-read-more mt-auto">Baca Selengkapnya <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            <!-- Article 3 -->
+            <div class="col-md-6 col-lg-4">
+                <article class="article-card h-100 d-flex flex-column">
+                    <div class="card-img-wrap position-relative">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgQMBOU7fltSNyUMW8OLlGxIFWeOLGC7M2kkDZFiY85IwRTLHTZ4LHT6S4lTbaSyAkdkdEseEguqQoSP8eVaDuCdYOC6lFyPACRZYDcNGqPctrswbGxL4ocF7F9CcSXDst-LMH2FEECh9GRmwPwjxb41D799Cc_ojAAPt1qmvAXJDxB63u4GOSMJ1T6ct2H79sSyijWXMdy1BokJsFm4LyfB3EuvBWyEhz6LT9D1wWr9BOqARjw1o7q3C-0L70NEJZMrVHBifqrXY"
+                            alt="Manfaat outbound untuk team building perusahaan" loading="lazy" width="400"
+                            height="220" />
+                        <span class="article-badge position-absolute" style="top:12px;left:12px;">
+                            <i class="bi bi-building"></i> Perusahaan
+                        </span>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h3 class="fs-5 fw-bold mb-2">Manfaat Outbound untuk Team Building Perusahaan di Batu</h3>
+                        <p class="text-muted small mb-3 flex-grow-1">Pelajari bagaimana program outbound dapat
+                            meningkatkan kinerja, kerjasama, dan motivasi tim perusahaan Anda.</p>
+                        <a href="artikel-3.html" class="btn-read-more mt-auto">Baca Selengkapnya <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            <!-- Article 4 -->
+            <div class="col-md-6 col-lg-4">
+                <article class="article-card h-100 d-flex flex-column">
+                    <div class="card-img-wrap position-relative">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTGhI6nwADNWa6Jbr-TMZ-UmU3MyJ6KZbtv4kP5JI437JW0oQuODcDwWKAiPrtiZjGRui6a-Lh9QU6v3o5WtSAyv5N_4waFV7522dr8fwcG9nN15V1hxz4DzZB_yAvZPSRQlZ8xmiQax5tbH-gqfq3kbSCy_GtMNAAaJyx1LKdfuFe1jW9VBzRW_JE_qn-RK_q4H-IuaVYqkP_WNfyIMTHSaQjj6WgM5KCfBYzbDAoSe8wP4cOhXOErdabf_sS-uyQGS23lP-O2oo"
+                            alt="Paket outbound keluarga family gathering Batu Malang" loading="lazy" width="400"
+                            height="220" />
+                        <span class="article-badge position-absolute" style="top:12px;left:12px;">
+                            <i class="bi bi-heart-fill"></i> Keluarga
+                        </span>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h3 class="fs-5 fw-bold mb-2">Paket Family Gathering Seru di Batu Malang untuk Keluarga</h3>
+                        <p class="text-muted small mb-3 flex-grow-1">Panduan lengkap memilih paket family gathering yang
+                            seru dan berkesan untuk seluruh anggota keluarga di Batu.</p>
+                        <a href="artikel-4.html" class="btn-read-more mt-auto">Baca Selengkapnya <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            <!-- Article 5 -->
+            <div class="col-md-6 col-lg-4">
+                <article class="article-card h-100 d-flex flex-column">
+                    <div class="card-img-wrap position-relative">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCybbwA8ZmoZ-8GLnOjNLuQx0pHv9Qk6L46oOce3m1MHCvDjfdK0hYVe2hxu9GqSiDTEnxEnRAFOILvL6I88Gg1moyDhFKL4NpWY6C0c0gjdXFtGKnXwxbFO6ayig7aeFz7R2G6u0mqUF6oVIKKsJD8cRBGvmPLeH6LKaMq39ZL-7vpFSZvEn843_mmwIeSGzdGVJU_DnI0LgQfVPykecuVdY9cK7aT9l7KK6ehk96NwUK2UIG9BpWS-pSt9x0Ho9g2MysaExJrrYw"
+                            alt="Wisata edukasi alam Batu Malang untuk sekolah" loading="lazy" width="400"
+                            height="220" />
+                        <span class="article-badge position-absolute" style="top:12px;left:12px;">
+                            <i class="bi bi-book-fill"></i> Edukasi
+                        </span>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h3 class="fs-5 fw-bold mb-2">Wisata Edukasi Alam Batu Malang: Belajar Sambil Bermain</h3>
+                        <p class="text-muted small mb-3 flex-grow-1">Temukan destinasi wisata edukasi terbaik di Batu
+                            Malang yang cocok untuk field trip sekolah dan kegiatan belajar outdoor.</p>
+                        <a href="artikel-5.html" class="btn-read-more mt-auto">Baca Selengkapnya <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== FOOTER (SAME AS INDEX) ===== -->
+    <footer class="footer-main" id="footer">
+        <div class="container py-5">
+            <div class="row g-4 g-lg-5">
+                <div class="col-lg-5">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <div class="navbar-brand-icon">
+                            <i class="bi bi-tree-fill"></i>
+                        </div>
+                        <span style="font-size:1.4rem;font-weight:700;letter-spacing:-0.5px;">Gemilang Katun</span>
+                    </div>
+                    <p style="color:rgba(255,255,255,0.65);max-width:360px;line-height:1.7;">
+                        Vendor outbound Batu Malang terpercaya. Kami berkomitmen menghadirkan pengalaman outbound
+                        terbaik dengan layanan profesional dan lokasi alam yang memukau di Kota Batu.
+                    </p>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer"
+                            class="footer-social-btn" aria-label="WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                        <a href="https://instagram.com/gemilangkatun" target="_blank" rel="noopener noreferrer"
+                            class="footer-social-btn" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/gemilangkatun" target="_blank" rel="noopener noreferrer"
+                            class="footer-social-btn" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="mailto:info@gemilangkatun.com" class="footer-social-btn" aria-label="Email">
+                            <i class="bi bi-envelope-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5
+                        style="font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--primary);margin-bottom:1rem;">
+                        Navigasi</h5>
+                    <ul class="list-unstyled" style="line-height:2.2;">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="index.html#tentang-kami">Tentang Kami</a></li>
+                        <li><a href="index.html#paket">Paket Outbound</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5
+                        style="font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--primary);margin-bottom:1rem;">
+                        Layanan</h5>
+                    <ul class="list-unstyled" style="line-height:2.2;">
+                        <li><a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">Team
+                                Building</a></li>
+                        <li><a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">Outbound
+                                Anak</a></li>
+                        <li><a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">Family
+                                Gathering</a></li>
+                        <li><a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">Outing
+                                Kantor</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5
+                        style="font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--primary);margin-bottom:1rem;">
+                        Kontak</h5>
+                    <ul class="list-unstyled" style="line-height:2.2;">
+                        <li><i class="bi bi-geo-alt-fill me-2" style="color:var(--primary);"></i> Kota Batu, Malang,
+                            Jawa Timur</li>
+                        <li><a href="tel:+6281234567890"><i class="bi bi-telephone-fill me-2"
+                                    style="color:var(--primary);"></i> 0812-3456-7890</a></li>
+                        <li><a href="mailto:info@gemilangkatun.com"><i class="bi bi-envelope-fill me-2"
+                                    style="color:var(--primary);"></i> info@gemilangkatun.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider my-4" />
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <p style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin:0;">© 2024 Gemilang Katun Outbound. Hak
+                    cipta dilindungi.</p>
+                <p style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin:0;">Vendor Outbound Batu Malang
+                    Terpercaya</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== FLOATING BUTTONS (SAME AS INDEX) ===== -->
+    <div class="floating-btns">
+        <button class="btn-scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+            aria-label="Kembali ke atas">
+            <i class="bi bi-chevron-double-up"></i>
+        </button>
+        <a class="btn-wa-float" href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer"
+            aria-label="Hubungi via WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <script>
+        // Scroll Top Button Visibility
+        const scrollBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 400) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar-glass');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>
